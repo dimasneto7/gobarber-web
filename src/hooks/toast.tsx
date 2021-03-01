@@ -1,5 +1,4 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
-import { FiMessageSquare } from 'react-icons/fi';
 import { v4 as uuid } from 'uuid';
 
 import ToastContainer from '../components/ToastContainer';

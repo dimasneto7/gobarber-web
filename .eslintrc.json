@@ -12,7 +12,8 @@
     ],
     "globals": {
       "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
+      "SharedArrayBuffer": "readonly",
+      "__DEV__": "readonly"
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -31,15 +32,18 @@
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "react/jsx-props-no-spreading": "off",
-      "react/prop-types": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/camelcase": "off",
+      "camelcase": "off",
+      "@typescript-eslint/no-empty-function": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
       "import/prefer-default-export": "off",
-      "camelcase": "off",
+      "prettier/prettier": "error",
+      "import/no-duplicates": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
       "no-unused-expressions": "off",
       "@typescript-eslint/ban-types": "off",
-      "no-use-before-define": "off",
-      "prettier/prettier": "error",
       "import/extensions": [
         "error",
         "ignorePackages",
