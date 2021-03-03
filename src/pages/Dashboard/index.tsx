@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { isToday, format, isAfter } from 'date-fns';
+import { isToday, format, isAfter, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 import { FiClock, FiPower } from 'react-icons/fi';
-import { parseISO } from 'date-fns/esm';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -142,7 +142,9 @@ const Dashboard: React.FC = () => {
             <img src={user.avatar_url} alt={user.name} />
             <div>
               <span>Bem-vindo,</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 
@@ -166,7 +168,7 @@ const Dashboard: React.FC = () => {
               <strong>Agendamento a seguir</strong>
               <div>
                 <img
-                  src={nextAppointment.user.avatar_url}
+                  src={nextAppointment?.user.avatar_url}
                   alt={nextAppointment.user.name}
                 />
 
